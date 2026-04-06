@@ -48,17 +48,16 @@ mvn clean package && java -jar @name@.@packaging@
 ## Interfaces de Eventos usados
 
 - [ActionListener](/src/dev/pessotto/view/components/containers/NavContainer.java): Evento genérico como um clique de botão.
-- [MouseListener](/src/dev/pessotto/view/components/cards/MouseListener.java): Para eventos de entrada, saída e cliques do mouse.
-- [MouseMotionListener](/src/dev/pessotto/view/components/cards/MouseListener.java): Lida com eventos de movimento do mouse.
-- [MouseWheelListener](/src/dev/pessotto/view/components/cards/MouseListener.java): Detecta gestos com o scroll do mouse.
-- [KeyListener](/src/dev/pessotto/view/components/cards/KeyListener.java): Qualquer interação com o teclado.
+- [MouseListener](/src/dev/pessotto/view/components/pages/MouseEventsPage.java): Para eventos de entrada, saída e cliques do mouse.
+- [MouseMotionListener](/src/dev/pessotto/view/components/pages/MouseEventsPage.java): Lida com eventos de movimento do mouse.
+- [MouseWheelListener](/src/dev/pessotto/view/components/pages/MouseEventsPage.java): Detecta gestos com o scroll do mouse.
+- [KeyListener](/src/dev/pessotto/view/components/pages/KeyboardEventsPage.java): Qualquer interação com o teclado.
 - [WindowListener](/src/dev/pessotto/view/components/Window.java): Comportamentos gerais da janela (minimizada, em foco etc).
 
 ## Documentação (apenas para auxílio)
 
 - Catppuccin: https://catppuccin.com/palette/
 - FlatLaf: https://www.formdev.com/flatlaf/customizing/
-- Repositório FlatLaf: https://github.com/JFormDesigner/FlatLaf
 - Maven Jar Plugin: https://maven.apache.org/plugins/maven-jar-plugin/index.html
 - Maven Shade Plugin: https://maven.apache.org/plugins/maven-shade-plugin/index.html
 
