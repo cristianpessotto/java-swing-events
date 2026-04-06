@@ -18,7 +18,7 @@
     </properties>
 
     <name>${project.name}</name>
-    <url>github.com/cristianpessotto/java-swing-events</url>
+    <url>https://github.com/cristianpessotto/java-swing-events</url>
     <inceptionYear>2026</inceptionYear>
     <packaging>jar</packaging>
 

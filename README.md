@@ -29,7 +29,7 @@ A execução do projeto exite que você tenha a JDK 25 (ou superior) e o maven i
 ### Clona o repositório e acesse a sua pasta
 
 ```shell
-git clone github.com/cristianpessotto/java-swing-events
+git clone https://github.com/cristianpessotto/java-swing-events
 cd java-swing-events
 ```
 
