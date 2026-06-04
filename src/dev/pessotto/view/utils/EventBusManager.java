@@ -1,4 +1,4 @@
-package dev.pessotto.view.managers;
+package dev.pessotto.view.utils;
 
 import java.util.*;
 import java.util.function.Consumer;
@@ -21,18 +21,24 @@ public final class EventBusManager
     public static final class Event<T>
     {
         public final T data;
-        public Event(T data) { this.data = data; }
+
+        public Event(T data)
+        {
+            this.data = data;
+        }
     }
 
     /**
-     * Uma mapeamento com nome do evento e uma lista de callbacks que recebem um {@code Event} genérico.
+     * Uma mapeamento com nome do evento e uma lista de callbacks que recebem um {@code Event}
+     * genérico.
      */
     public static final Map<String, List<Consumer<Event<?>>>> listeners = new HashMap<>();
 
     /**
      * Classe utilitária não precisa de instância (evite usar singleton).
      */
-    private EventBusManager(){}
+    private EventBusManager()
+    {}
 
     /**
      * Registra um conjunto callbacks para determinando evento.
@@ -56,7 +62,11 @@ public final class EventBusManager
     {
         var consumers = listeners.get(name);
         if (consumers != null)
+        {
             for (var consumer : consumers)
+            {
                 consumer.accept(new Event<T>(data));
+            }
+        }
     }
 }

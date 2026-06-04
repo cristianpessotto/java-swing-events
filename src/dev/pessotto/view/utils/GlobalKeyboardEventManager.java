@@ -1,4 +1,4 @@
-package dev.pessotto.view.managers;
+package dev.pessotto.view.utils;
 
 import java.awt.Component;
 import java.awt.KeyEventDispatcher;
@@ -19,12 +19,14 @@ public final class GlobalKeyboardEventManager
     /**
      * Manager é a própria instância do {@link KeyboardFocusManager}.
      */
-    private final static KeyboardFocusManager manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
+    private final static KeyboardFocusManager manager =
+            KeyboardFocusManager.getCurrentKeyboardFocusManager();
 
     /**
      * Classe utilitária não precisa de instância (evite usar singleton).
      */
-    private GlobalKeyboardEventManager(){}
+    private GlobalKeyboardEventManager()
+    {}
 
     /**
      * @return O componente que está em foco.
@@ -44,8 +46,8 @@ public final class GlobalKeyboardEventManager
 
     /**
      *
-     * Adiciona eventos de teclado globais que são interceptados antes de enviar para o componente em
-     * foco. A assinatura com retorno e visibilidade do callback dev ser:
+     * Adiciona eventos de teclado globais que são interceptados antes de enviar para o componente
+     * em foco. A assinatura com retorno e visibilidade do callback dev ser:
      *
      * <pre>
      *  public boolean callbackName(KeyEvent e)

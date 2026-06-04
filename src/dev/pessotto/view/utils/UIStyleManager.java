@@ -1,4 +1,4 @@
-package dev.pessotto.view.managers;
+package dev.pessotto.view.utils;
 
 import java.awt.Font;
 import java.awt.FontFormatException;
@@ -37,7 +37,8 @@ public final class UIStyleManager
         FlatLaf.registerCustomDefaultsSource("resources.themes");
         try
         {
-            var resource    = UIStyleManager.class.getResourceAsStream("/resources/fonts/TekturRegular.ttf");
+            var resource    =
+                    UIStyleManager.class.getResourceAsStream("/resources/fonts/TekturRegular.ttf");
             var font        = Font.createFont(Font.TRUETYPE_FONT, resource);
             var environment = GraphicsEnvironment.getLocalGraphicsEnvironment();
             environment.registerFont(font);
@@ -67,7 +68,8 @@ public final class UIStyleManager
     /**
      * Classe utilitária não precisa de instância (evite usar singleton).
      */
-    private UIStyleManager(){}
+    private UIStyleManager()
+    {}
 
     /**
      * Aplica o estilo padrão da classe {@link CatppuccinLatteTheme}.
@@ -84,6 +86,7 @@ public final class UIStyleManager
      * @param lookAndFeel indica o tema que será aplicado.
      * @param showPane se deve ou não exibir uma mensagem informando que o tema foi aplicado.
      */
+    // @formatter:off
     public static void applyStyle(LookAndFeel lookAndFeel, boolean showPane)
     {
         SwingUtilities.invokeLater(() -> {
@@ -113,6 +116,7 @@ public final class UIStyleManager
             }
         });
     }
+    // @formatter:on
 
     /**
      * Método que fica alternando entre os temas Mocha e Latte.
@@ -124,6 +128,7 @@ public final class UIStyleManager
         FlatAnimatedLafChange.showSnapshot();
         applyStyle(isLight ? DARK : LIGHT, showPane);
         FlatAnimatedLafChange.hideSnapshotWithAnimation();
+
         isLight = !isLight;
     }
 }

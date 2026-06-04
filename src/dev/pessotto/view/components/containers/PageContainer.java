@@ -8,10 +8,10 @@ import javax.swing.JPanel;
 import javax.swing.text.JTextComponent;
 
 import dev.pessotto.view.components.pages.Pages;
+import dev.pessotto.view.utils.EventBusManager;
+import dev.pessotto.view.utils.GlobalKeyboardEventManager;
 import dev.pessotto.view.components.pages.KeyboardEventsPage;
 import dev.pessotto.view.components.pages.MouseEventsPage;
-import dev.pessotto.view.managers.EventBusManager;
-import dev.pessotto.view.managers.GlobalKeyboardEventManager;
 
 public final class PageContainer extends JPanel implements Pages
 {
@@ -33,16 +33,11 @@ public final class PageContainer extends JPanel implements Pages
 
     public boolean togglePage(KeyEvent e)
     {
-        if (e.getID() != KeyEvent.KEY_RELEASED)
-            return false;
+        if (e.getID() != KeyEvent.KEY_RELEASED) return false;
+        if (GlobalKeyboardEventManager.getFocusComponent() instanceof JTextComponent) return false;
+        if (!e.isControlDown()) return false;
 
-        if (GlobalKeyboardEventManager.getFocusComponent() instanceof JTextComponent)
-            return false;
-
-        if (!e.isControlDown())
-            return false;
-
-        var code = e.getKeyCode();
+        var code   = e.getKeyCode();
         var layout = (CardLayout) getLayout();
 
         if (code == KeyEvent.VK_LEFT)
@@ -55,6 +50,7 @@ public final class PageContainer extends JPanel implements Pages
             layout.previous(this);
             return true;
         }
+
         return false;
     }
 

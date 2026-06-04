@@ -4,9 +4,9 @@ import java.awt.BorderLayout;
 
 import dev.pessotto.view.components.Window;
 import dev.pessotto.view.components.containers.PageContainer;
+import dev.pessotto.view.utils.GlobalKeyboardEventManager;
+import dev.pessotto.view.utils.UIStyleManager;
 import dev.pessotto.view.components.containers.NavContainer;
-import dev.pessotto.view.managers.GlobalKeyboardEventManager;
-import dev.pessotto.view.managers.UIStyleManager;
 
 public final class SwingApplication
 {
@@ -23,6 +23,7 @@ public final class SwingApplication
 
         GlobalKeyboardEventManager.addKeyEvent(pageContainer::togglePage);
         GlobalKeyboardEventManager.addKeyEvent(window::toggleTheme);
+        GlobalKeyboardEventManager.addKeyEvent(window::focusWindow);
 
         window.run();
     }

@@ -15,6 +15,7 @@ import com.formdev.flatlaf.FlatClientProperties;
 
 public final class MouseEventsPage extends JPanel
 {
+    //@formatter:off
     public MouseEventsPage()
     {
         var layout             = new GridBagLayout();
@@ -27,10 +28,10 @@ public final class MouseEventsPage extends JPanel
         var labelMovedDragged  = new JLabel("Move/Drag", JLabel.CENTER);
         var labelWheelMoved    = new JLabel("Scroll", JLabel.CENTER);
 
-        final int LABEL_WIDTH      = 200;
-        final int LABEL_HEIGHT     = 300;
-        final int LABEL_MIN_WIDTH  = 100;
-        final int LABEL_MIN_HEIGHT = 150;
+        final var LABEL_WIDTH      = 200;
+        final var LABEL_HEIGHT     = 300;
+        final var LABEL_MIN_WIDTH  = 100;
+        final var LABEL_MIN_HEIGHT = 150;
 
         setLayout(layout);
 
