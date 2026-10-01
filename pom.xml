@@ -23,7 +23,10 @@
     <packaging>jar</packaging>
 
     <description>
-        Projeto desenvolvido para atender requisitos da atividade de Programação de Computadores 2 (3º Período de Bacharel em Sistemas de Informação). O projeto consiste em uma aplicação desktop desenvolvida em Java Swing que exemplifica 10 eventos diferentes que podemos trabalhar com a API Swing do Java.
+        Projeto desenvolvido para atender requisitos da atividade de Programação de Computadores 2
+        (3º Período de Bacharel em Sistemas de Informação). O projeto consiste em uma aplicação
+        desktop desenvolvida em Java Swing que exemplifica 10 eventos diferentes que podemos
+        trabalhar com a API Swing do Java.
     </description>
 
     <developers>
@@ -67,7 +70,7 @@
                 <targetPath>resources/</targetPath>
             </resource>
             <resource>
-                <directory>resources/meta</directory>
+                <directory>resources/docs</directory>
                 <targetPath>../../</targetPath>
                 <filtering>true</filtering>
             </resource>

@@ -2,13 +2,16 @@
 
 ## Descrição
 
-Projeto desenvolvido para atender requisitos da atividade de Programação de Computadores 2 (3º Período de Bacharel em Sistemas de Informação). O projeto consiste em uma aplicação desktop desenvolvida em Java Swing que exemplifica 10 eventos diferentes que podemos trabalhar com a API Swing do Java.
+Projeto desenvolvido para atender requisitos da atividade de Programação de Computadores 2
+        (3º Período de Bacharel em Sistemas de Informação). O projeto consiste em uma aplicação
+        desktop desenvolvida em Java Swing que exemplifica 10 eventos diferentes que podemos
+        trabalhar com a API Swing do Java.
 
 ## Tecnologias usadas
 
-- [Java](https://docs.oracle.com/en/java/javase/25/index.html): Linguagem de programação usando a OpenJDK 25.0.2 LTS da Eclipse Temurin.
+- [Java](https://docs.oracle.com/en/java/javase/25/index.html): Linguagem de programação usando a OpenJDK 25 LTS da Eclipse Temurin.
 - [Swing](https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/javax/swing/package-summary.html): API build-in do Java para criação de interfaces gráficas.
-- [FlatLaf](https://github.com/JFormDesigner/FlatLaf): Tema moderno para Java Swing (v 3.7.1).
+- [FlatLaf](https://github.com/JFormDesigner/FlatLaf): Tema moderno para Java Swing.
 - [Maven](https://maven.apache.org/): Gerenciador de projetos Java.
 - [Visual Studio Code](https://code.visualstudio.com/): Editor de código-fonte multiplataforma.
 
@@ -24,22 +27,28 @@ Projeto desenvolvido para atender requisitos da atividade de Programação de Co
 
 ## Como executar
 
-A execução do projeto exite que você tenha a JDK 25 (ou superior) e o maven instalados no seu computador...
+A execução do projeto exige que você tenha a JDK instalada no seu computador. Você pode usar o Maven Wrapper que vem junto com o projeto para executar os comandos abaixo, basta apenas troca o utilitário `mvn` para `mvnw.cmd` ou `mvnw.sh` dependendo do seu sistema operacional.
 
-### Clona o repositório e acesse a sua pasta
+### Clonagem do repositório
 
 ```shell
 git clone https://github.com/cristianpessotto/java-swing-events
 cd java-swing-events
 ```
 
-### Compila e executa o projeto
+### Instalação de dependências localmente (opcional)
+
+```shell
+mvn dependency:go-offline dependency:resolve-plugins
+```
+
+### Compilação e execução do projeto
 
 ```shell
 mvn compile exec:java
 ```
 
-### Empacotar em um .jar e executar ele
+### Empacotamento e execução do projeto
 
 ```shell
 mvn clean package && java -jar JavaSwingEvents.jar
