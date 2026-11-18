@@ -27,7 +27,7 @@ Projeto desenvolvido para atender requisitos da atividade de Programação de Co
 
 ## Como executar
 
-A execução do projeto exige que você tenha a JDK instalada no seu computador. Você pode usar o Maven Wrapper que vem junto com o projeto para executar os comandos abaixo, basta apenas troca o utilitário `mvn` para `mvnw.cmd` ou `mvnw.sh` dependendo do seu sistema operacional.
+A execução do projeto exige que você tenha a JDK instalada no seu computador. Você pode usar o Maven Wrapper que vem junto com o projeto para executar os comandos abaixo, basta apenas troca o utilitário `mvn` para `mvnw.cmd` ou `mvnw` dependendo do seu sistema operacional.
 
 ### Clonagem do repositório
 
